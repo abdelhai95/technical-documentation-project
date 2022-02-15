@@ -3,6 +3,8 @@
     flex-wrap:nowrap;
     margin:0px;
     font-family:monospace;
+    background-color: rgb(117, 131, 131);
+    
 }
 #navbar {
     flex-flow:column nowrap;
@@ -37,6 +39,35 @@ ul {
 }
 .nav-link a {
     text-decoration:none;
-    color:black;
+    color:rgb(221, 86, 86);
     
+}
+/* changing headers font color */
+main section h2 {
+    color:rgb(221, 86, 86);
+}
+#header {
+    color:rgb(221, 86, 86);
+}
+/* adding counters to content */
+#main-doc {
+    counter-reset: mag;
+}
+.main-section {
+    position:relative;
+    
+}
+.main-section::before {
+    position: absolute;
+    content: counter(mag);
+    counter-increment:mag;
+    width:25px;
+    height:25px;
+    background-color:rgb(33, 58, 58);
+    color:rgb(221, 86, 86);
+    margin-left:-30px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center ;
+    align-items: center;
 }
